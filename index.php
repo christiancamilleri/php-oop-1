@@ -13,7 +13,7 @@ class Movie
     public $limiteEta = 'Consigliato a tutti';
 
     // inizializzo costruttore
-    function __construct(string $_titolo, string $_genere, string $_descrizione)
+    function __construct(string $_titolo, array $_genere, string $_descrizione)
     {
         $this->titolo = $_titolo;
         $this->genere = $_genere;
@@ -25,7 +25,7 @@ class Movie
 
     public function getLimiteEta($genere)
     {
-        if ($genere == 'horror') {
+        if (in_array('horror', $genere)) {
             $this->limiteEta = 'vietato ai minori di 16 anni';
         }
     }
@@ -34,8 +34,8 @@ class Movie
 ;
 
 // creo primo oggetto movie
-$fast_and_furios = new Movie("Fast and Furios", "corsa", "ddskfykjfbuykfbkewfvbwefberwb");
-$profondo_rosso = new Movie('Profondo rosso', 'horror', 'fdsbddbvdbdsbffiusdbiuo');
+$fast_and_furios = new Movie("Fast and Furios", ["gare", "drammatico"], "ddskfykjfbuykfbkewfvbwefberwb");
+$profondo_rosso = new Movie('Profondo rosso', ['horror', 'splatter'], 'fdsbddbvdbdsbffiusdbiuo');
 
 ?>
 
