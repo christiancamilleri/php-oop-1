@@ -76,6 +76,7 @@ $movies[] = $profondo_rosso;
             ?>
         </tbody>
     </table>
+
 </body>
 
 </html>

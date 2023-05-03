@@ -15,12 +15,12 @@ class Movie
         $this->titolo = $_titolo;
         $this->genere = $_genere;
         $this->descrizione = $_descrizione;
-        $this->getLimiteEta($_genere);
+        $this->setGenere($_genere);
 
 
     }
 
-    public function getLimiteEta($genere)
+    public function setGenere($genere)
     {
         if (in_array('horror', $genere)) {
             $this->limiteEta = 'No';
